@@ -11,6 +11,7 @@ public class Square
         int a = 10;
         square(a);
     }*/
+   
 
     // static non void
     /*static int square(int a)

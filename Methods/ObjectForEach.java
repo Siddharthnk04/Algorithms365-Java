@@ -48,7 +48,7 @@ public class ObjectForEach
 
         //obj4 for max()
         ObjectForEach obj4 = new ObjectForEach();
-        int c = obj4.max(10, 25);
+        int c = obj3.max(10, 25);
         System.out.println(c);
     }
 }
