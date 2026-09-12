@@ -38,10 +38,30 @@ public class MethodOverloading
         return z;
     }
 
+    double max(double x, double y)
+    {
+        if (x > y)
+            return x;
+        return y;
+    }
+
+
+    long max(long x, long y)
+    {
+        if (x > y)
+            return x;
+        return y;
+    }
+
     public static void main(String[] args) 
     {
+        byte a = 8, b = 56;
+
         MethodOverloading obj = new MethodOverloading();
-        System.out.println(obj.max(10.0f, 8.0f));
+
+        System.out.println(obj.max(10.0, 8.5));
+        System.out.println(obj.max(10L, 8));
         System.out.println(obj.max(10, 8, 30));
+        System.out.println(obj.max(a, b));
     }
 }
