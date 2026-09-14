@@ -1,6 +1,7 @@
 public class MethInMethActivity 
 {
-    static void palindrome(int n)
+    //Palindrome
+    /*static void palindrome(int n)
     {
         if (n == reverse(n))
             System.out.println("Palindrome");
@@ -27,5 +28,7 @@ public class MethInMethActivity
 
         palindrome(a);
         palindrome(5456);
-    }
+    }*/
+
+    
 }
