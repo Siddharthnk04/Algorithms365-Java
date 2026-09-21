@@ -13,9 +13,9 @@ public class MarksCard
         return total;
     }
 
-    static double percentage(double percentage)
+    static double percentage(int totalMarks)
     {
-        return percentage / 500 * 100;
+        return totalMarks / 500 * 100;
     }
 
     static char grade(double percentage)
