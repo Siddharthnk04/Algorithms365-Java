@@ -19,6 +19,10 @@ public class SecondLargest
                     secondLargest = x;
                 }
             }
+            else if (largest == secondLargest)
+            {
+                secondLargest = x;
+            }
         }
 
         return secondLargest;
