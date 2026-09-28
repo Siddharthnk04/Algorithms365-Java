@@ -61,9 +61,8 @@ public class ArrayTraversal
 
         if (numbers.length % 2 == 1)
         {
-            System.out.print(numbers[numbers.length/2] + " -> ");
-            left = numbers.length / 2 - 1;
-            right = numbers.length / 2 + 1;
+            left = numbers.length / 2;
+            right = left;
         }
         else
         {
@@ -73,7 +72,14 @@ public class ArrayTraversal
 
         while (left >= 0)
         {
-            System.out.print(numbers[left] + " -> " + numbers[right]);
+            if (left == right)
+            {
+                System.out.print(numbers[left]);
+            }
+            else
+            {
+                System.out.print(numbers[left] + " -> " + numbers[right]);
+            }
             left--;
             right++;
 
