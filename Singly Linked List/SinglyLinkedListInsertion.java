@@ -55,13 +55,14 @@ public class SinglyLinkedListInsertion
         return head;
     }
 
-    static Node insertAfterValue(int data, int value, Node head)
+    static void insertAfterValue(Node head, int value, int data)
     {
         if (head == null)
         {
             System.out.println("List is Empty!!!");
-            return null;
+            return;
         }
+
         Node temp = head;
         while (temp != null && temp.data != value)
         {
@@ -69,6 +70,36 @@ public class SinglyLinkedListInsertion
         }
 
         if (temp == null)
+        {
+            System.out.println("Value " + value + ", does not exist!!!");
+            return;
+        }
+
+        Node newNode = createNode(data);
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+    static Node inserstBeforeValue(Node head, int value, int data)
+    {
+        if (head == null)
+        {
+            return null;
+        }
+
+        if (head.data == value)
+        {
+            return insertAtStart(data, head);
+        }
+
+        Node temp = head;
+
+        while (temp.next != null && temp.next.data != value)
+        {
+            temp = temp.next;
+        }
+
+        if (temp.next == null)
         {
             System.out.println("Value " + value + ", does not exist!!!");
             return head;
@@ -90,6 +121,7 @@ public class SinglyLinkedListInsertion
         printLinkedList(head);
         head = insertAtEnd(85, head);
         printLinkedList(head);
+        
         //Insert at begining
         head = insertAtStart(25, head);
         printLinkedList(head);
@@ -99,7 +131,10 @@ public class SinglyLinkedListInsertion
         printLinkedList(head);
 
         //Insert at middle
-        insertAfterValue(500, 30, head);
+        insertAfterValue(head, 25, 500);
+        printLinkedList(head);
+
+        head = inserstBeforeValue(head, 85, 250);
         printLinkedList(head);
     }
 }

@@ -2,6 +2,12 @@ public class ArrayInsertion
 {
     static void printArrayElements(int[] array)
     {
+        if (array.length == 0)
+        {
+            System.out.println("Array is Empty!!!");
+            return;
+        }
+        
         for (int x : array)
         {
             System.out.print(x + " ");
