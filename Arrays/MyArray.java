@@ -99,9 +99,10 @@ public class MyArray
             return;
         }
 
-        for (int i = 1; i < rightIndex; i++)
+        //Shifting from array[0] = array[1] till right index
+        for (int i = 0; i < rightIndex - 1; i++)
         {
-            array[i-1] = array[i];
+            array[i] = array[i + 1];
         }
         rightIndex--;   
         array[rightIndex] = 0;
@@ -122,7 +123,7 @@ public class MyArray
         System.out.println("Deleted at end.");
     }
 
-    //Delete At Position
+    //Delete At Position 
     public void deleteAtPosition(int position)
     {
         if (rightIndex == 0)
@@ -131,12 +132,14 @@ public class MyArray
             return;
         }
 
+        //check whether position is valid or not
         if (position < 0 || position >= rightIndex)
         {
             System.out.println("Invalid position. Connot delete");
             return;
         }
 
+        //Shift from array[position] = array[position + 1] till right index
         for (int i = position; i < rightIndex - 1; i++)
         {
             array[i] = array[i + 1];

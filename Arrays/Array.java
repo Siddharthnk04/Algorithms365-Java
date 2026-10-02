@@ -3,6 +3,8 @@ public class Array
     public static void main(String[] args) 
     {
         MyArray myArray = new MyArray();
+
+        //================ Insertion ====================
         myArray.insertAtEnd(10);
         myArray.printArray();
 
@@ -21,10 +23,14 @@ public class Array
         myArray.insertAtPosition(30, 0);
         myArray.printArray();
 
+        // ======================= Deletion =====================
         myArray.deleteAtStart();
         myArray.printArray();
 
-        myArray.insertAtPositionUnordered(30, 2);
+        myArray.deleteAtEnd();
+        myArray.printArray();
+
+        myArray.deleteAtPosition(1);
         myArray.printArray();
     }
 }
