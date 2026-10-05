@@ -1,4 +1,4 @@
-public class SinglyLinkedListInsertion 
+public class SLL 
 {
     static Node createNode(int data)
     {
@@ -111,6 +111,75 @@ public class SinglyLinkedListInsertion
         return head;
     }
 
+    static Node deleteAtStart(Node head)
+    {
+        if (head == null)
+        {
+            System.out.println("List is Empty!!! Cannot delete.");
+            return null;
+        }
+
+        System.out.println("Deleted at Start");
+        return head.next;
+    }
+
+    static Node deleteAtEnd(Node head)
+    {
+        if (head == null)
+        {
+            System.out.println("List is Empty!!! Cannot delete.");
+            return null;
+        }
+        if (head.next == null)
+        {
+            System.out.println("Deleted at End");
+            return null;
+        }
+
+        Node temp = head;
+
+        while (temp.next.next != null)
+        {
+            temp = temp.next;
+        }
+        temp.next = null;
+        System.out.println("Deleted at End");
+        return head;
+    }
+
+    static Node deleteKeyNode(int key, Node head)
+    {
+        if (head == null)
+        {
+            System.out.println("List is Empty!!! Cannot delete.");
+            return null;
+        }
+
+        while (head != null && head.data == key)
+        {
+            head = head.next;
+        }
+
+        Node keyNode = head;
+        Node prev = null;
+
+        while (keyNode != null)
+        {
+            if (keyNode.data == key)
+            {
+                prev.next = keyNode.next;
+                keyNode = keyNode.next;
+            }
+            else
+            {
+                prev = keyNode;
+                keyNode = keyNode.next;
+            }
+        }
+
+        return head;
+    }
+
     public static void main(String[] args) 
     {
         Node head = null;
@@ -118,23 +187,49 @@ public class SinglyLinkedListInsertion
         // head.next = createNode(20);
         // head.next.next = createNode(30);
 
+        // printLinkedList(head);
+        // head = insertAtEnd(85, head);
+        // printLinkedList(head);
+        
+        // //Insert at begining
+        // head = insertAtStart(25, head);
+        // printLinkedList(head);
+
+        // //Insert at end
+        // insertAtEnd(100, head);
+        // printLinkedList(head);
+
+        // //Insert at middle
+        // insertAfterValue(head, 25, 500);
+        // printLinkedList(head);
+
+        // head = inserstBeforeValue(head, 85, 250);
+        // printLinkedList(head);
+
         printLinkedList(head);
-        head = insertAtEnd(85, head);
+        head = deleteAtStart(head);
+        printLinkedList(head);
+
+        head = insertAtEnd(20, head);
         printLinkedList(head);
         
-        //Insert at begining
-        head = insertAtStart(25, head);
-        printLinkedList(head);
 
-        //Insert at end
-        insertAtEnd(100, head);
-        printLinkedList(head);
+        head = insertAtEnd(20, head);
+        head = insertAtEnd(30, head);
+        head = insertAtEnd(20, head);
+        head = insertAtEnd(50, head);
 
-        //Insert at middle
-        insertAfterValue(head, 25, 500);
         printLinkedList(head);
+        // head = deleteAtStart(head);
+        // printLinkedList(head);
 
-        head = inserstBeforeValue(head, 85, 250);
+        // head = deleteAtEnd(head);
+        // printLinkedList(head);
+        
+        // head = deleteKeyNode(40, head);
+        // printLinkedList(head);
+
+        head = deleteKeyNode(200, head);
         printLinkedList(head);
     }
 }
