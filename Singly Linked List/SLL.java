@@ -206,16 +206,16 @@ public class SLL
         // head = inserstBeforeValue(head, 85, 250);
         // printLinkedList(head);
 
-        printLinkedList(head);
-        head = deleteAtStart(head);
-        printLinkedList(head);
+        // printLinkedList(head);
+        // head = deleteAtStart(head);
+        // printLinkedList(head);
 
-        head = insertAtEnd(20, head);
-        printLinkedList(head);
+        // head = insertAtEnd(20, head);
+        // printLinkedList(head);
         
 
-        head = insertAtEnd(20, head);
         head = insertAtEnd(30, head);
+        head = insertAtEnd(20, head);
         head = insertAtEnd(20, head);
         head = insertAtEnd(50, head);
 
@@ -229,7 +229,7 @@ public class SLL
         // head = deleteKeyNode(40, head);
         // printLinkedList(head);
 
-        head = deleteKeyNode(200, head);
+        head = deleteKeyNode(20, head);
         printLinkedList(head);
     }
 }

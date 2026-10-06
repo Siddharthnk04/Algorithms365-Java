@@ -16,6 +16,6 @@ public class StackAsArray
 
         System.out.println(myStack.pop());
         myStack.printStackElements();
-
+        System.out.println(myStack.pop());
     }
 }

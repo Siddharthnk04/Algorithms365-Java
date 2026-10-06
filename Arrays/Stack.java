@@ -60,9 +60,7 @@ public class Stack
             System.out.println("Stack is Empty!! Cannot pop.");
             return -1;
         }
-
-        int val = stack[top];
-        top--;
-        return val;
+  
+        return stack[top--];
     }
 }
