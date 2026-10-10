@@ -13,7 +13,7 @@ public class EvenAndOddCount
 
         for (int x : nums)
         {
-            if (x % 2 == 0)
+            if ((x & 1) == 0)
                 evenCount++;
             else
                 oddCount++;
