@@ -1,4 +1,4 @@
-public class CountHotterTemperature 
+public class CountRaisingTemperature 
 {
     static int countHotterTemperature(int[] temperatures)
     {

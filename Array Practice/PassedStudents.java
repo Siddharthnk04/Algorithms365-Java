@@ -18,7 +18,7 @@ public class PassedStudents
 
     public static void main(String[] args) 
     {
-        int[] marks = {40, 82, 35, 90, 78};
+        int[] marks = {40, 12, 35, 90, 28};
 
         System.out.println(countPassedStudents(marks));
         
