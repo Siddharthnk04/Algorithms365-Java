@@ -12,7 +12,8 @@ public class VowelsConsonants
 
         for (char x : arr)
         {
-            if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' || x == 'A' || x == 'E' || x == 'U' || x == 'I' || x == 'O')
+            if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' || x == 'A' || 
+                x == 'E' || x == 'U' || x == 'I' || x == 'O')
                 vowelCount++;
             else if ((x >= 'a' && x <='z') || (x >= 'A' && x <= 'Z'))
                 consonantCount++;
