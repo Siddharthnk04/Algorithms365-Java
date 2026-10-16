@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
-public class CapitacWords 
+public class CapitalLetters 
 {
-    static char[] convertToCaapital(char[] arr)
+    static char[] convertToCapital(char[] arr)
     {
         if (arr == null || arr.length == 0)
             return arr;
@@ -24,7 +24,6 @@ public class CapitacWords
     {
         char[] arr = {'c','o','d','e'};
 
-        System.out.println(Arrays.toString(convertToCaapital(arr)));
-        
+        System.out.println(Arrays.toString(convertToCapital(arr)));
     }
 }
