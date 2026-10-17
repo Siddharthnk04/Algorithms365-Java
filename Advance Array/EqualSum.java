@@ -28,7 +28,7 @@ public class EqualSum
 
     public static void main(String[] args) 
     {
-        int[] nums = {1, 7, 3, 6, 5, 6, 1};
+        int[] nums = {2, 7, 3, 6, 5, 6, 1};
 
         System.out.println(getEqualSumIndex(nums));
     }

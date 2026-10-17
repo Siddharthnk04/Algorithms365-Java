@@ -2,21 +2,20 @@ public class MaxSharesProfit
 {
     static int maxSharesProfit(int[] prices)
     {
+        if (prices == null || prices.length == 0)
+            return -1;
+        
         int profit = 0;
         int buyingPrice = prices[0];
 
         for (int i = 1; i < prices.length; i++)
         {
             if (prices[i] < buyingPrice)
-            {
                 buyingPrice = prices[i];
-            }
             else
             {
                 if (prices[i] - buyingPrice > profit)
-                {
                     profit = prices[i] - buyingPrice;
-                }
             }
         }
 
@@ -27,7 +26,6 @@ public class MaxSharesProfit
     {
         int[] prices = {7, 1, 5, 3, 6, 4};
 
-        System.out.println(maxSharesProfit(prices));
-        
+        System.out.println(maxSharesProfit(prices)); 
     }
 }

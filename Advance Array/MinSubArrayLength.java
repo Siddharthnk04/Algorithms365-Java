@@ -2,6 +2,9 @@ public class MinSubArrayLength
 {
     static int minSubArrayLen(int[] nums, int target)
     {
+        if (nums == null || nums.length == 0)
+            return -1;
+        
         int left = 0;
         int right = 0;
         int sum = 0;
