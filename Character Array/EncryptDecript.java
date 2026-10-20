@@ -13,8 +13,6 @@ public class EncryptDecript
             encrypedMessage += "+";
         }
 
-        System.out.println(encrypedMessage);
-
         char[] temp = encrypedMessage.toCharArray();
         encrypedMessage = "";
         String seperator = "ghijklmnopqrstuvwxyz";
