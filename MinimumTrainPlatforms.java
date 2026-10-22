@@ -27,6 +27,8 @@ public class MinimumTrainPlatforms
         return minimumPlatform;
     }
 
+
+    // Sorting + Two Pointers
     static int minimumPlatrormsRequired(int[] arrival, int[] departure)
     {
         Arrays.sort(arrival);
@@ -43,19 +45,22 @@ public class MinimumTrainPlatforms
             {
                 occupiedPlatforms++;
                 arrivalIndex++;
+
+                minimumPlatform = Math.max(minimumPlatform, occupiedPlatforms);
+
             }
             else 
             {
                 occupiedPlatforms--;
                 departureIndex++;
             }
-
-            minimumPlatform = Math.max(minimumPlatform, occupiedPlatforms);
         }
 
         return minimumPlatform; 
     }
 
+
+    //Extra Array + Running Sum
     static int findMinimumPlatformsRequired(int[] arrival, int[] departure)
     {
         // Convert time to minutes
