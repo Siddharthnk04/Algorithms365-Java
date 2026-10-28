@@ -2,6 +2,9 @@ public class SameValuesInSameOrder
 {
     static boolean isSameValuesInSameOrder(Node head1, Node head2)
     {
+        if (head1 == null && head2 == null)
+            return false;
+
         while (head1 != null && head2 != null)
         {
             if (head1.data != head2.data)
@@ -21,6 +24,7 @@ public class SameValuesInSameOrder
         head1 = Node.insertAtEnd(head1, 5);
         head1 = Node.insertAtEnd(head1, 3);
         head1 = Node.insertAtEnd(head1, 8);
+        head1 = Node.insertAtEnd(head1, 9);
         Node.printLinkedList(head1);
 
         Node head2 = null;
@@ -28,6 +32,8 @@ public class SameValuesInSameOrder
         head2 = Node.insertAtEnd(head2, 5);
         head2 = Node.insertAtEnd(head2, 3);
         head2 = Node.insertAtEnd(head2, 8);
+        head2 = Node.insertAtEnd(head2, 9);
+        
         Node.printLinkedList(head2);
 
         System.out.println(isSameValuesInSameOrder(head1, head2));
