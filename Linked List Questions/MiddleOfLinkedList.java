@@ -2,8 +2,9 @@ public class MiddleOfLinkedList
 {
     static int getMiddleNode (Node head)
     {
+        // List is empty
         if (head == null)
-            return -1;
+            return 0;
 
         Node slow = head;
         Node fast = head;

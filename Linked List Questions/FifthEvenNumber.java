@@ -1,18 +1,14 @@
 public class FifthEvenNumber 
 {
-    static int getFifthEvenNumber(Node head)
+    static int getFifthEvenNumber(Node head, int n)
     {
         if (head == null)
             return -1;
 
-        int count = 5;
-        while (head != null && count > 0)
+        while (head != null)
         {
-            if (head.data % 2 == 0)
-            {
-                if (--count == 0)
+            if (head.data % 2 == 0 && --n == 0)
                     return head.data;
-            }
             head = head.next;
         }
 
@@ -36,6 +32,6 @@ public class FifthEvenNumber
 
         Node.printLinkedList(head);
 
-        System.out.println(getFifthEvenNumber(head));
+        System.out.println(getFifthEvenNumber(head, 4));
     }
 }
