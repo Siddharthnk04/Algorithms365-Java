@@ -29,15 +29,16 @@ public class Stack
         System.out.println();
     }
 
-    public void peak()
+    public int peek()
     {
         if (top == -1)
         {
             System.out.println("Stack is Empty!! Cannot peak");
+            return -1;
         }
         else
         {
-            System.out.println(stack[top]);
+            return stack[top];
         }
     }
 
@@ -62,5 +63,11 @@ public class Stack
         }
   
         return stack[top--];
+    }
+
+    public boolean  isEmpty()
+    {
+        return top == -1;
+
     }
 }
