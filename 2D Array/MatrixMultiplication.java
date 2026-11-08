@@ -13,12 +13,18 @@ public class MatrixMultiplication
         }
     }
 
-    static int[][] matrixMultiplication (int[][] A, int[][] B)
+    static void matrixMultiplication (int[][] A, int[][] B)
     {
+        if (A == null || B == null)
+            return;
+
+        if (A.length == 0 || B.length == 0)
+            return;
+
         if (A[0].length != B.length)
         {
             System.out.println("Cannot Multiply");
-            return null;
+            return;
         }
         int[][] C = new int[A.length][B[0].length];
 
@@ -33,15 +39,15 @@ public class MatrixMultiplication
             }
         }
 
-        return C;
+        print2DArray(C);
     }
 
     public static void main(String[] args) 
     {
-        int[][] A = {{1,2}, {3,4}};
-        int[][] B = {{5,6}, {7,8}};
+        int[][] A = {{3,5,9}, {7,6,2}, {4,8,1}};
+        int[][] B = {{1,0,0}, {0,1,0}, {0,0,1}};
 
-        int[][] C = matrixMultiplication(A,B);
-        print2DArray(C);
+        matrixMultiplication(A,B);
+        
     }
 }

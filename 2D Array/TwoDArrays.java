@@ -173,7 +173,7 @@ public class TwoDArrays
         // System.out.println();
         // changeMatrix2(data);
 
-        printSpiralmatrix(data);
+        // printSpiralmatrix(data);
 
     }
 }
