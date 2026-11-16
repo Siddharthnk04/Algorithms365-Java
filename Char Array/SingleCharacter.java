@@ -70,6 +70,61 @@ public class SingleCharacter
             System.out.println(str.charAt(str.length() / 2 - 1) + " " + str.charAt(str.length() / 2));
     }
 
+    // Print chars at odd indices
+    // Char arrays
+    static void printOddIndexedChar(char[] arr)
+    {
+        for (int i = 1; i < arr.length; i += 2)
+        {
+            System.out.print(arr[i]);
+        }
+
+        System.out.println();
+    }
+
+    // strings
+    static void printOddIndexedChar(String str)
+    {
+        for (int i = 1; i < str.length(); i += 2)
+        {
+            System.out.print(str.charAt(i));
+        }
+
+        System.out.println();
+    }
+
+    static boolean isVowel(char ch)
+    {
+        return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'
+            || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'
+        );
+    }
+
+    static void countVowels(char[] arr)
+    {
+        int count = 0;
+        for (char ch : arr)
+        {
+            if (isVowel(ch))
+                count++;
+        }
+
+        System.out.println(count);
+    }
+
+    static void countVowels(String str)
+    {
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (isVowel(str.charAt(i)))
+                count++;
+        }
+
+        System.out.println(count);
+    }
+
     public static void main(String[] args) 
     {
         // char ch = 'A';
@@ -83,10 +138,12 @@ public class SingleCharacter
 
         char[] array = {'J', 'a', 'v', 'a'};
 
-        printCharAtEvenIndices(array);
-        printCharAtEvenIndices("array");
 
-        printMiddleChars(array);
-        printMiddleChars("arrhay");
+        printOddIndexedChar(array);
+        printOddIndexedChar("array");
+
+        countVowels(array);
+        countVowels("array");
+
     }
 }
