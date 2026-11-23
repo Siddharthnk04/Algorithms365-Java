@@ -3,9 +3,6 @@
 // The char array contains enough space for expansion
 // The array does not contains 0 or 1
 
-
-import java.util.Arrays;
-
 public class ExpandInPlace 
 {
     static int findReadIndex(char[] str)
@@ -55,7 +52,6 @@ public class ExpandInPlace
 
         // If the length of array is exactly equal to output string, then writeIndex 
         // will be length - 1. Or else we need to calculate writeIndex.
-
         // int writeIndex = str.length - 1;
         int writeIndex = calculateWriteIndex(str, readIndex);
 
@@ -81,9 +77,9 @@ public class ExpandInPlace
     public static void main(String[] args) 
     {
         char[] str = {'a','3','b','2','c',Character.MIN_VALUE};
-        System.out.println(Arrays.toString(str));
+        System.out.println(str);
 
         expandString(str);
-        System.out.println(Arrays.toString(str));
+        System.out.println(str);
     }
 }
