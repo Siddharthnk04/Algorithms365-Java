@@ -64,19 +64,19 @@ public class MinimumTrainPlatforms
     static int findMinimumPlatformsRequired(int[] arrival, int[] departure)
     {
         // Convert time to minutes
-        for (int i = 0; i < arrival.length; i++)
-        {
-            arrival[i] = (arrival[i] / 100) * 60 + (arrival[i] % 100);
-            departure[i] = (departure[i] / 100) * 60 + (departure[i] % 100);
-        }
+        // for (int i = 0; i < arrival.length; i++)
+        // {
+        //     arrival[i] = (arrival[i] / 100) * 60 + (arrival[i] % 100);
+        //     departure[i] = (departure[i] / 100) * 60 + (departure[i] % 100);
+        // }
 
         //There are 1440 minutes in a day
         int[] timeLine = new int[1440];
 
         for (int i = 0; i < arrival.length; i++)
         {
-            timeLine[arrival[i]]++;
-            timeLine[departure[i]]--;
+            timeLine[(arrival[i] / 100) * 60 + (arrival[i] % 100)]++;
+            timeLine[(departure[i] / 100) * 60 + (departure[i] % 100)]--;
         }
 
         int minimumPlatrormsRequired = 0;
@@ -99,8 +99,8 @@ public class MinimumTrainPlatforms
         int[] departure = {1000, 945, 1030, 1100};
 
         // System.out.println(findMinimumPlatrormsBruteforce(arrival, departure));
-        // System.out.println(minimumPlatrormsRequired(arrival, departure));
+        System.out.println(minimumPlatrormsRequired(arrival, departure));
 
-        System.out.println(findMinimumPlatformsRequired(arrival, departure));
+        // System.out.println(findMinimumPlatformsRequired(arrival, departure));
     }
 }
