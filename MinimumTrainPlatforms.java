@@ -26,7 +26,7 @@ public class MinimumTrainPlatforms
 
         return minimumPlatform;
     }
-
+    
 
     // Sorting + Two Pointers
     static int minimumPlatrormsRequired(int[] arrival, int[] departure)
